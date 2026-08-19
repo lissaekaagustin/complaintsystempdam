@@ -1,0 +1,91 @@
+PANDUAN MENGGANTI BACKGROUND HALAMAN AWAL
+WEB-BASED CUSTOMER COMPLAINT SYSTEM PDAM
+============================================================
+
+A. POSISI BACKGROUND SAAT INI
+Background halaman awal berada di folder:
+
+assets/img/background-home.jpg
+
+Halaman awal yang memakai background adalah:
+
+index.php
+
+Pengaturan nama file background ada di:
+
+config/app.php
+
+Pada bagian:
+
+define('HOME_BACKGROUND_IMAGE', 'assets/img/background-home.jpg');
+
+
+B. CARA PALING MUDAH MENGGANTI BACKGROUND
+1. Siapkan gambar yang ingin dijadikan background.
+   Disarankan:
+   - Format: jpg atau png
+   - Ukuran ideal: 1920 x 1080 px
+   - Nama file sederhana, contoh: background-pdam.jpg
+
+2. Copy gambar tersebut ke folder:
+
+C:\xampp\htdocs\pdam_complaint_system\assets\img\
+
+3. Buka project di Sublime Text.
+
+4. Buka file:
+
+config/app.php
+
+5. Cari baris ini:
+
+define('HOME_BACKGROUND_IMAGE', 'assets/img/background-home.jpg');
+
+6. Ganti menjadi nama file baru, contoh:
+
+define('HOME_BACKGROUND_IMAGE', 'assets/img/background-pdam.jpg');
+
+7. Simpan file dengan Ctrl + S.
+
+8. Buka browser dan refresh halaman:
+
+http://localhost/pdam_complaint_system
+
+
+C. CARA CEPAT TANPA EDIT CODING
+Kalau tidak mau mengubah coding:
+1. Hapus atau rename file lama:
+   assets/img/background-home.jpg
+
+2. Masukkan gambar baru ke folder:
+   assets/img/
+
+3. Ubah nama gambar baru menjadi:
+   background-home.jpg
+
+4. Refresh halaman awal di browser.
+
+
+D. KALAU BACKGROUND TIDAK BERUBAH
+Coba lakukan:
+1. Tekan Ctrl + F5 di browser.
+2. Pastikan nama file di config/app.php sama persis.
+3. Pastikan file gambar benar-benar berada di folder assets/img/.
+4. Pastikan alamat sistem dibuka lewat:
+   http://localhost/pdam_complaint_system
+   bukan dari file explorer.
+
+
+E. BAGIAN CODING YANG MENGATUR BACKGROUND
+1. config/app.php
+   Mengatur nama file background.
+
+2. index.php
+   Menampilkan halaman awal dan memanggil background.
+
+3. assets/css/style.css
+   Mengatur tampilan background, overlay gelap, tulisan, tombol, dan card fitur.
+
+
+F. CONTOH PENJELASAN UNTUK BAB IV SKRIPSI
+Halaman awal sistem dirancang menggunakan background gambar agar tampilan sistem lebih menarik dan mencerminkan layanan PDAM. Background halaman awal dapat diganti melalui konfigurasi HOME_BACKGROUND_IMAGE pada file config/app.php. Dengan cara ini, pengembang tidak perlu mengubah struktur utama halaman, cukup mengganti file gambar atau mengubah nama file background yang digunakan.
